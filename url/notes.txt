@@ -1,0 +1,209 @@
+Notas Iniciais
+
+ 05/10/2021 11:52: 
+16841596013
+tealiumteste@hotmail.com
+senha:teste@1234
+
+
+ 05/10/2021 15:21: Acesso IBMCloud:
+ ibmcloud login -sso
+
+Selecionar a conta (No caso da Fast é 3)
+Selecionar a região (br-sao)
+ibmcloud ks cluster ls
+
+ibmcloud ks cluster config --cluster ClusterDev
+kubectl get pods -n dev 
+
+kubectl get pods -n dev | grep checkout 
+kubectl get deployments checkout -n dev -o yaml
+
+kubectl port-forward checkout-db-0 -n dev 27017:27017
+kubectl port-forward checkout-db-0 -n uat  47017:27017
+
+Executar nessa Ordem:
+
+ibmcloud login -sso
+ibmcloud ks cluster config --cluster ClusterDev
+kubectl port-forward checkout-db-0 -n uat  47017:27017
+
+
+
+
+ 05/10/2021 15:27: 
+${DB_URL:mongodb://root:f4sTP4SsU4t@localhost:47017/checkout?authSource=admin}
+
+
+25987121027
+fast@123
+ 
+ Helpdesk TI Fast -> 3232-3278
+ 06/10/2021 09:55: 
+ 06/10/2021 13:24: 
+
+CPF's para Massa no PosaService
+
+39081475819*
+
+33451820099*
+
+35854295806*
+
+38216574053*
+
+36074311080*
+
+76572526003*
+
+94402955033*
+
+17814980089*
+
+70031780873*
+
+43429744873*
+
+34591867803*
+
+REQ007 -> Distribuição do valor de frete por Itens rateio
+Por Item.....
+
+
+
+
+<Lotofácil>
+
+Regrasde negócio: 
+
+1- Nunca aposte em uma combinação que já foi sorteada
+
+2-Equilibre quantidades de dezenas pares e impares
+
+3-Regra dos 16 números para ganhos em dobro (alternando os numeros finais)
+
+4- Não usar sequencia (Regra da Bola 1 [1,2,3,4], Bola 15 [22,23,24,25]
+
+5-Usar sempre 5 ou 6 numeros primos nos jogos.
+
+
+Strees Test - FMS
+
+
+1 - Necessário gerar um pedido com reserva, e existente na consulta do APIOrder e OrderDetail(GAN).
+Nesse ponto é criado junto ao CarrierConnector o pedido junto a transportadora.
+
+2 - Pedido encaminhado pelo fluxo ESB para o Kafka(Pedido, Pagamento e Cancelamento).
+
+3 -  FMS baixa o pedido, e monta ele, consultando Shipping, ApiOrder, OrderDetail(GAN) e CarrierConnector.
+
+4 - FMS pelo processo de atualização, consulta o CarrierConnector, e atualiza os dados do pedido conforme a transportadora atualiza.
+
+5 - Processo de atualização do pedido é finalizado quando o pedido fica com status Entregue ou Cancelado.
+
+
+Em momento algum houve interação de endpoints para esse processo.
+O usuário consegue listar pedidos, verificar por endpoint de telemetria quantidade de pedidos, pedidos entregues, pedidos pendentes pagamentos, etc.
+
+
+
+
+ 11/10/2021 09:33:  senha fastShop fast@1110
+
+
+
+updateShipModeEfetive
+
+ 14/10/2021 09:29: Checkout: mapa de endpoints
+
+{/addListItem} -> Adiciona item ao carrinho de Compras
+
+{/self} -> Valida Carrinho
+
+{/shippingMode} seleção do tipo de entrega
+
+ShippingMethod :
+
+cada escolha do tipo de entrega (normal) gerou um contrato desses abaixo:
+[{"deliveryCode":"FAST-01-33","shipModeName":"Normal","addressId":"11850164","sku":null}]
+[{"deliveryCode":"FAST-04-14","shipModeName":"Normal","addressId":"11850164","sku":null}]
+
+
+
+ 18/10/2021 09:39: Massa para Front (Posa)
+726.097.350-14
+137.847.330-26
+700.317.808-73
+
+
+
+
+
+{
+    "_id": {
+        "$oid": "615df627014c8862a2ee0b16"
+    },
+    "anticipated": false,
+    "dateOrder": "06-10-2021T14:20:00.000",
+    "orderId": "061020210003",
+    "orderSaleId": "061020210003",
+    "ganOrderId": "061020210003",
+    "originalOrderId": "061020210003",
+    "pinLastFour": "d337",
+    "pin": "f205dca9-21d6-4373-b794-2a8a8946d337",
+    "customerId": "K998191",
+    "customerDoc": "39081475819",
+    "provider": "F100101",
+    "purchaseUser": "12712712712",
+    "salesChannel": "ECOMMERCE",
+    "sku": "GKWINDOWS10",
+    "skuPartner": "799366264941",
+    "statusPinForSale": "sold",
+    "statusPinForUse": "view",
+    "invoiceId": "1234",
+    "ref": {
+        "$numberLong": "20211006"
+    },
+    "status": "PIN RESGATADO - AGUARDANDO ATIVAÇÃO",
+    "statusTracking": [{
+        "status": "PEDIDO AGUARDANDO CONFIRMAÇÃO DE PAGAMENTO",
+        "dateHour": "06-10-2021T14:20:08.545"
+    }, {
+        "status": "PIN LIBERADO - AGUARDANDO RESGATE DO CLIENTE",
+        "dateHour": "06-10-2021T14:22:08.545"
+    }, {
+        "status": "PIN RESGATADO - AGUARDANDO ATIVAÇÃO",
+        "dateHour": "08-10-2021T16:52:22.339"
+    }, {
+        "status": "PIN RESGATADO - AGUARDANDO ATIVAÇÃO",
+        "dateHour": "08-10-2021T16:53:14.340"
+    }, {
+        "status": "PIN RESGATADO - AGUARDANDO ATIVAÇÃO",
+        "dateHour": "08-10-2021T18:56:08.771"
+    }, {
+        "status": "PIN RESGATADO - AGUARDANDO ATIVAÇÃO",
+        "dateHour": "08-10-2021T18:57:01.338"
+    }, {
+        "status": "PIN RESGATADO - AGUARDANDO ATIVAÇÃO",
+        "dateHour": "11-10-2021T15:55:41.706"
+    }],
+    "scratchCard": {
+        "dateHour": "11-10-2021T15:55:41.170",
+        "clientIp": "192.0.0.1"
+    },
+    "error": {},
+    "price": "59.99",
+    "posaServiceCreateDate": "06-10-2021T14:20:08.545",
+    "transactionId": "256ded45-fe95-4157-b79d-061020210003",
+    "urlImage": "https://www.fastshop.com.br/wcsstore/FastShopCAS/images/catalog/posaIcon.png",
+    "shortDescription": "Titulo de Teste do Posa",
+    "isRedeemCodeUsed": true,
+    "observation1": "observação1",
+    "observation2": "observação2",
+    "observation3": "observação3",
+    "observation4": "observação4",
+    "orderByDateTime": {
+        "$numberLong": "20211006142008545"
+    },
+    "_class": "com.fastshop.posaservice.domain.PosaPurchaseOrderDomain"
+}

@@ -1,0 +1,7 @@
+https://code.fastshopdev.com/
+https://jira.fastshop.com.br/login.jsp?saml_sso=false
+https://kibana.tools.fastshopdev.com/s/seller-service/login?next=%2Fs%2Fseller-service%2Fapp%2Fhome
+http://grafana.tools.fastshopdev.com/
+https://webapp2-qa.fastshop.com.br/
+https://trocasenha.fastshop.com.br/
+Https://parceirofast.fastshop.com.br/
